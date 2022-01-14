@@ -1,0 +1,44 @@
+:q         | q quit 
+:wq        | Save and exit 
+:q!        | don’t save q quit 
+:w         | save your file as you’re working 
+I          | go into insert mode 
+Esc        | escape insert mode 
+a          | appends insert after position 
+dd         | deletes a line (in command mode) (also copies to clipboard) 
+x          | delete current char 
+dw         | delete word 
+d$         | delete from cursor position to end of the line j
+u          | undo (in command mode) 
+Ctrl r     | redo (in command mode) 
+.          | does the command again you just did 
+G          | go all the way down 
+gg         | go all the way up 
+{          | go up a block of code 
+}          | go down a block of code 
+r char     | replaces char of current position with whatever we want 
+hjkl       | left down up right (can put a number in front to skip that many lines) 
+yy         | copy line to clipboard
+p          | paste 
+/poop      | when in command mode, just type forward slash then type the word you wanna search, type n to go to next word 
+v          | go into visual mode, highlight, press y to copy or d to delete. hj
+o          | drops to new line and puts you into insert mode 
+w          | jump to next word horizontally 
+b          | jump to previous word horizontally 
+%          | toggle between start and end of curlies or brackets 
+set number | add line numbers on left 
+cw         | change the word. can be used with dot and search cmd/n to change multiple occurances of a word 
+cgn        | type /searchWord then cgn and you can update occurences of the same word 
+
+
+
+
+
+
+
+:[start line],[end line]s/^/#   | comment out this range of lines 
+
+
+NOTE: Capitalized letters are treated as less than lowercase letters in test comparisons. However, the sort command does the opposite.
+
+https://www.youtube.com/watch?v=IiwGbcd8S7I -> Stopped watching at 18:56 

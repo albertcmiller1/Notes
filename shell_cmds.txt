@@ -1,0 +1,75 @@
+?                 | query my_scr?pt -> return my_script and my_scrapt
+*                 | query my* -> returns my_bs, my_script, my_scrapt 
+&                 | put this at the end of your command to run the process but still access cmd line 
+>                 | redirect std output to a file (replaces file if prepopulated)
+>>                | redirect std output to a file (appends file if prepopulated)
+<                 | Input redirection. takes the content of a file and redirects it to cmd. ex) wc coolFile.txt; wc < coolFile.txt; 
+<<                | inline input redirection. allows you to specify the data for input redirection on the command line instead of in a file. 
+$                 | whenever a script sees this it assumes we are talking about a variable. might need to use \ to escape 
+()                | run your commands in a subshell 
+${HOME}           | executes the variable 
+var1=`date`       | command substitution
+var2=$(date)      | command substitution
+|                 | pipe. linux actually runs both at the same time. don think of this as two diff commands 
+$[ operation ]    | do math. integer only :( ZSH apparently can do floating pt
+bc                | bash calculator -> cool way to do math with decimals. notice the use of scale to set the fraction length. ex) var=`echo "6 / 2" | bc`
+$?                | can echo this to see the exit code from the last command 
+exit 6            | can set our own exit status at the end of our scripts
+my_scr[ai]pt      | a and i are two potential choices 
+[ compare ]       | works the same as the test cmd 
+[ ] || [ ]        | or
+[ ] && [ ]        | and 
+(( ))             | advanced math expressions 
+[[ ]]             | advanced string comparisons 
+IFS               | Internal Field Separator: defaults to a space, tab, or new line. Can be changed 
+basename          | Way to get the name of the fired function in conjunction with $0 ex) test=$(basename $0)
+$#                | gives the number of cmd line parameters included when the script was run 
+$0                | shows working terminal 
+$*                | gives all the cmd line parameters included as a single word 
+$@                | gives all the cmd line parameters included as separate words in the same string 
+shift             | shifts the user input parameters one to the left by default 
+getopt            | parse command options. ie) getopt <optstring> <parameters> 
+read              | accept user input 
+1> file           | redirect standrad output to a file  
+2> file           | redirect standrad error to a file  
+&> file           | redirect both standrad ouput and error to a file. ie) ls -al file_that_exists badfile
+>&2               | put this after a line, and the line will be directed to stderr 
+exec 0< file      | inform the shell to retrieve input from the file, 'file,' instead of stdin 
+$$                | env var for the PID of the current process
+
+
+
+----------------RUN SHELL-----------------
+#!/bin/bash -> indicates what shell to use when running script -> needs to be at first line of file 
+
+three ways to run our shell script 
+> sh test.sh 
+> add the directory to PATH env var 
+> use absolute or relative dir to run the file (might need chmod)
+
+
+----------------VARIABLES-----------------
+variables are maintained for the life of the program but deleted after done executing 
+variables types are automatically detected 
+cant have any space between var1=10
+case sensitive 
+
+
+------------------COOL EX's------------------
+variable=$(bc << EOF
+  options
+  statements
+  expressions
+EOF )
+
+----------------STRINGS-----------------
+"this'll" work 
+this\'\\ work 
+"New York"
+"$file" | this might be a smart thing to do incase the file is two words 
+
+
+
+process list -> Adding parentheses and turning the command list into a process list creates a subshell to execute the commands.
+( command ; )  | background mode => creates subshell ex) ( pwd ; (echo $BASH_SUBSHELL))
+{ command ; }  | does not create subshell 

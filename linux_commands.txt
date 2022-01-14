@@ -1,0 +1,108 @@
+------------------------NETWORKING------------------------
+netstat           | show network status. try) netstat -an, netstat -pnl, netstat -pant
+ping              | determine how long it takes to reach an endpoint 
+traceroute        | find the route taken to reach an endpoint 
+sh                | a command language interpreter that executes commands read from either a command line string, standard input, or a file. https://www.computerhope.com/unix/ush.htm 
+ssh               | log into another IP 
+
+
+-------------------FILE MANIPULATION--------------------
+sed               | replace strings 
+awk               | limit output to a specified column 
+grep              | search for strings
+source            | restarts a file? 
+sort              | print a file in the order you want it outputted 
+
+
+-------------------FILESYSTEM--------------------
+ls                | -F, -a, -R 
+chmod             | sets the permissions of files or directories. https://www.computerhope.com/unix/uchmod.htm 
+tree              | cool tree shit 
+file              | shows what file type it is 
+tar -czf          | create archives.tar.gz
+tar -xf           | extract a folder  
+gzip              | compress files  
+chown             | allows you to change the user and/or group ownership of a given file, directory, or symbolic link. https://linuxize.com/post/linux-chown-command/ 
+chgrp             | change group ownership 
+
+
+------------------------VIEW SHIT------------------------
+less 
+more 
+tail 
+tailf             
+
+
+--------------------------COMMAND INFO-----------------------
+which             | locate a program file in the user's path. built in commands are less expensive bc they do not require spawning a subprocess 
+where             | 
+type              | determine if a cmd is builtin or not. 
+alias -p          | show what commands are using an alias 
+history           | show all commands used 
+
+
+------------------------------PROCESS----------------------------------
+top               | shows running processes and other cool shit 
+ps                | By default, the ps command shows only the processes that belong to the current user and that are running on the current terminal. PID process id, TTY terminal, CUP used 
+sleep             | wait 
+jobs              | show processes running in the background 
+coproc <>         | runs whatever command you input as a coprocess 
+
+
+--------------------DISKS---------------------
+df -h             | dope way to see what hard dives are on the system 
+du                | shows the disk usage for a specific directory (shows files n shit for under the working dir) try du -sh 
+
+
+--------------------------------SYSTEM AND HARDWARE INFO--------------------------------
+lscpu             | https://www.binarytides.com/linux-commands-hardware-info/ 
+w                 |
+whoami            |
+uptime            |
+dstat             |
+systemctl         | https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units 
+hostname          | https://www.geeksforgeeks.org/hostname-command-in-linux-with-examples/ 
+
+ 
+-----------------------------ENVIRONMENT VARIABLES-----------------------------------
+printenv 		      | prints global environment variables 
+env               | 
+set               | displays all local, global, and user-defined env vars for a given process 
+echo $USER        | https://www.cyberciti.biz/faq/linux-list-all-environment-variables-env-command/ when using the $ infront of a env var, we can use it as a cmd. ex) ls $HOME
+my_var=POO        | super easy to make an env var. NOTE: cant have any spaces on either side of equal sign 
+albie="hi al"     | if there's a space in your text use quotes 
+export <my_var>   | do this to your local env var to make it global (to child processes). if we update the env var in a child process, it will not update the env var for the parent process 
+unset <my_var>    | remove the environment var
+myarr=(one two)   | can create an env var that is an array. try) echo $myarr try) echo ${myarr[1]} try) echo ${myarr[*]}
+
+
+---------------------------- PARTITIONING ------------------------------------
+fidsk             | used to help you organize partitions on any storage device installed on the system. A partition is the disk or a part of a disk that contains the filesystem 
+mkefs /dev/dbd1   | creates an efs filesystem on the device or on a partition of a device 
+mount             | mounts a device (or partition of a device) onto a mount point on the filesystem tree. note: this is a temporary mount. reboot will not auto mount again. use etc/fstab to add the filesystem to auto boot 
+umount            | 
+Q                 | If i were to plug in a flash drive, where would i go to see it? i think id have to use fdisk before i saw it on df -h 
+Q                 | Do flash drives come pre loaded with filesystems? 
+fsck              | check and repair filesystems 
+
+
+-------------------------------INSTALLING SOFTWARE ---------------------------------
+rpm              | used for installing, managing, and removing software packages on red hat distributions
+> apt-get 
+> apt-cache 
+> aptitdue 
+dpkg             | used for installing, managing, and removing software packages on debian distributions 
+brew             | package manager for macOS 
+
+-------------------------------NOTES---------------------------------
+
+file owner, group, everyone else 
+--- --- --- 
+read    = 4
+write   = 2 
+execute = 1 
+
+expr              | do MATH 
+test              | evaluates expressions. if true, returns 0, else returns a non-zero number 
+
+Q: my .profile file isn't in the PATH variable. but it does have #!/bin/bash. so how does cmd line know to check for it? is it bc we did the source cmd to reload the file
