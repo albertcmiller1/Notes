@@ -65,7 +65,7 @@ hostname          | https://www.geeksforgeeks.org/hostname-command-in-linux-with
 
  
 -----------------------------ENVIRONMENT VARIABLES-----------------------------------
-printenv 		      | prints global environment variables 
+printenv          | prints global environment variables 
 env               | 
 set               | displays all local, global, and user-defined env vars for a given process 
 echo $USER        | https://www.cyberciti.biz/faq/linux-list-all-environment-variables-env-command/ when using the $ infront of a env var, we can use it as a cmd. ex) ls $HOME
