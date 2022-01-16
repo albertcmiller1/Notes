@@ -12,16 +12,16 @@ awk               | limit output to a specified column
 grep              | search for strings
 source            | restarts a file? 
 sort              | print a file in the order you want it outputted 
-
+unzip             | unzip a file 
+tar -czf          | create archives.tar.gz
+tar -xf           | extract a folder  
+gzip              | compress files  
 
 -------------------FILESYSTEM--------------------
 ls                | -F, -a, -R 
 chmod             | sets the permissions of files or directories. https://www.computerhope.com/unix/uchmod.htm 
 tree              | cool tree shit 
 file              | shows what file type it is 
-tar -czf          | create archives.tar.gz
-tar -xf           | extract a folder  
-gzip              | compress files  
 chown             | allows you to change the user and/or group ownership of a given file, directory, or symbolic link. https://linuxize.com/post/linux-chown-command/ 
 chgrp             | change group ownership 
 

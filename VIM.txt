@@ -30,26 +30,15 @@ set number | add line numbers on left
 cw         | change the word. can be used with dot and search cmd/n to change multiple occurances of a word 
 cgn        | type /searchWord then cgn and you can update occurences of the same word 
 
-
-
-
-
-
-
+-----------------------NERDTREE---------------------
+i 	   | open file in split screen 
+ctrl r     | switch to vi w/o nerdtree 
+term       | opens a terminal, type exit to exit... go to lest plane and type rR to reload the files if you added or deleted shit 
+shift C    | in the left sidebar, type this to go into a directory 
+m          | in the left sidebar, type m to make a new file or dir
 :[start line],[end line]s/^/#   | comment out this range of lines 
 
 
 NOTE: Capitalized letters are treated as less than lowercase letters in test comparisons. However, the sort command does the opposite.
 
 https://www.youtube.com/watch?v=IiwGbcd8S7I -> Stopped watching at 18:56 
-
-
-
-
-
-Test Test Test 
-
-2
-2
-2
-2

@@ -69,7 +69,6 @@ this\'\\ work
 "$file" | this might be a smart thing to do incase the file is two words 
 
 
-
 process list -> Adding parentheses and turning the command list into a process list creates a subshell to execute the commands.
 ( command ; )  | background mode => creates subshell ex) ( pwd ; (echo $BASH_SUBSHELL))
 { command ; }  | does not create subshell 
