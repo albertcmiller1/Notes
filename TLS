@@ -1,0 +1,91 @@
+TLS/SSL Handshake | TLS session sits over TCP and encripts HTTP before it gets sent and received 
+all of this is done in two round trips.
+                           
+
+ 
+                CLIENT                                              SERVER 
+                                     client hello 
+                  ----------------------------------------------------> 
+
+
+                                     server hello 
+                  <----------------------------------------------------
+
+
+                                      certificate 
+                  <----------------------------------------------------
+
+
+                                 server key exchange 
+                  <----------------------------------------------------
+
+
+                                  server hello done 
+                  <----------------------------------------------------
+
+
+                                 client key exchange 
+                  ----------------------------------------------------> 
+
+
+                            change cipher specs / finished 
+                  ----------------------------------------------------> 
+
+
+                           change cipher specs / finished
+                  <----------------------------------------------------
+
+
+
+client hello 
+-> newest version of TLS the client can support 
+-> list of cipher suites the client can support 
+-> a random number  
+
+server hello 
+-> a chosen TLS version 
+-> a chosen cipher suite 
+-> a random number 
+
+certificate
+-> have a public key 
+-> has rsa key (if thats what weve agreed to use)
+-> ensures authenticity of server 
+
+server key exchange 
+-> parameters for ECDHA (generator & prime num)
+-> also sends public message (which is used in conjunction with private key)   
+-> digital signature: set of these digital messages summarized using a hash function and signed using private key (ensures authenicity of server)
+-> gives client shared secret (diffie helman params) 
+
+client key exchange 
+-> needed to finish diffie-helman 
+-> gives the server the shared secret (diffie helman params)
+
+change ciper spec / finished 
+-> done and ready to start encrypting 
+-> sends a summary of everything that has happend so far (listing off the events and the order they happened)
+-> the client and server must agreee the two summaries match (to ensure there was no middle man)
+
+
+
+
+CIPER SUITE 
+----------------------
+representation of all the things were going to do during handshake
+
+includes:
+1. Key Echange Algorithm        ie) diffie-hellman 
+2. Bulk Encription Algorithm    ie) RSA   
+3. Message Authentication Code 
+
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 
+
+TLS:        transport layer security 
+ECDHA:      elliptic-curve diffie-hellman ephemeral | key agreement protocol 
+RSA:        asymmetric cryptography algorithm 
+AES:        128 bit symetric block cipher 
+128:        key size 
+GCM:        mode of operation | galois / counter mode 
+SHA256:     hash function stuff 
+

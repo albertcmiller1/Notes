@@ -18,7 +18,10 @@ tar -xf           | extract a folder
 gzip              | compress files  
 
 -------------------FILESYSTEM--------------------
+cron              | daemon to execute scheduled commands 
+at                | 
 ls                | -F, -a, -R 
+lsof              | list open files
 chmod             | sets the permissions of files or directories. https://www.computerhope.com/unix/uchmod.htm 
 tree              | cool tree shit 
 file              | shows what file type it is 
@@ -104,5 +107,8 @@ execute = 1
 
 expr              | do MATH 
 test              | evaluates expressions. if true, returns 0, else returns a non-zero number 
+
+dd     | what is it??
+
 
 Q: my .profile file isn't in the PATH variable. but it does have #!/bin/bash. so how does cmd line know to check for it? is it bc we did the source cmd to reload the file

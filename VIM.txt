@@ -20,7 +20,7 @@ r char     | replaces char of current position with whatever we want
 hjkl       | left down up right (can put a number in front to skip that many lines) 
 yy         | copy line to clipboard
 p          | paste 
-/poop      | when in command mode, just type forward slash then type the word you wanna search, type n to go to next word 
+/poop      | search for occurences of poop 
 v          | go into visual mode, highlight, press y to copy or d to delete. hj
 o          | drops to new line and puts you into insert mode 
 w          | jump to next word horizontally 
