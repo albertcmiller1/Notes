@@ -4,7 +4,7 @@ ping              | determine how long it takes to reach an endpoint
 traceroute        | find the route taken to reach an endpoint 
 sh                | a command language interpreter that executes commands read from either a command line string, standard input, or a file. https://www.computerhope.com/unix/ush.htm 
 ssh               | log into another IP 
-
+nc google.com 80  | -zv ... not super sure but supposed to be super powerful
 
 -------------------FILE MANIPULATION--------------------
 sed               | replace strings 

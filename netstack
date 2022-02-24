@@ -1,3 +1,59 @@
 NET STACK 
 ---------------------------
 HTTP > TLS > TCP > IP > Ethernet > Physical 
+
+
+DHCP is a network management protocol used on IP at the application layer 
+
+
+NAT 
+> network access translation 
+> technique 
+> takes an IP and translate it to another 
+> allows a gateway (usually a router or filewall) to rewrite the source IP of an outgoing IP datagram while retaining the original IP in order to rewrite it into the response 
+> hides the IP from computer 1 from computer 2 (routers hold the info) 
+
+routers have an interface .. this is how the computers in the network know to reach it 
+A network switch is a computer networking device which connects various devices together on a single computer network.
+Routers are computer networking devices that serve two primary functions: (1) create and maintain a local area network and (2) manage the data entering and leaving the network as well as data moving inside of the network.
+
+
+proxy service | a server that acts on behalf of a client in order to access another service 
+> anonymity 
+> security 
+> content filtering 
+> increased performance 
+
+
+reverse proxy | a service that might appear to be a single server to external clients, but actually represents many servers living behind it 
+
+
+
+
+
+Ingress traffic can be any form of traffic whose source lies in an external network and whose destination resides inside the host network 
+
+Egress traffic is all traffic directed towards an external network and originated from inside the host network 
+
+
+				
+				
+	                 see the router. be the router. 
+	
+	
+ 			       	_________________	
+	              egress	|		|     ingress
+		  <------------	|		|  <------------
+              WAN		|    router	|                LAN 
+	          ------------>	|		|  ------------>
+		     ingress	|_______________|     egress
+
+
+
+when you upload data to the internet its going out of your local network so the traffic is egress based on the LAN's perspective, but not the router. 
+the router will treat that data as ingress since the traffic is coming towards it. 
+
+
+
+
+
