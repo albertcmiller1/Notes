@@ -40,7 +40,7 @@ $$                | env var for the PID of the current process
 
 
 ----------------RUN SHELL-----------------
-#!/bin/bash -> indicates what shell to use when running script -> needs to be at first line of file 
+#!/bin/bash -> indicates what shell to use when running script -> needs to be at first line of file. can also do this with other binaries ie) python
 
 three ways to run our shell script 
 > sh test.sh 
