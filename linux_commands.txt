@@ -16,6 +16,7 @@ unzip             | unzip a file
 tar -czf          | create archives.tar.gz
 tar -xf           | extract a folder  
 gzip              | compress files  
+uniq
 
 -------------------FILESYSTEM--------------------
 cron              | daemon to execute scheduled commands 
@@ -27,6 +28,7 @@ tree              | cool tree shit
 file              | shows what file type it is 
 chown             | allows you to change the user and/or group ownership of a given file, directory, or symbolic link. https://linuxize.com/post/linux-chown-command/ 
 chgrp             | change group ownership 
+find
 
 
 ------------------------VIEW SHIT------------------------
@@ -42,7 +44,7 @@ where             |
 type              | determine if a cmd is builtin or not. 
 alias -p          | show what commands are using an alias 
 history           | show all commands used 
-
+whereis
 
 ------------------------------PROCESS----------------------------------
 top               | shows running processes and other cool shit 
